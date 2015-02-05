@@ -14,10 +14,13 @@
   .row.tagline
     .col-md-8
       %h2.subheader
-        Increase your user engagement and sales with
-        %strong good
-        recommendations
-        %strong easily!
+        Increase your 
+        %strong 
+          %i user engagement 
+        and 
+        %strong 
+          %i sales 
+        with good recommendations
     #call_to_action.col-md-4
       %a#download_btn.btn.btn-lg.btn-block.btn-primary{:href => "https://github.com/grahamjenson/hapiger"}
         %i.fa.fa-github.icon
@@ -28,8 +31,8 @@
   .row
     %section#install.col-md-8
       .page-header
-        %h4 Install It
-      %p Global install with npm
+        %h4 Install HapiGER
+      %p Install with npm
       %pre
         %code.bash
           npm install -g hapiger 
@@ -40,10 +43,17 @@
       %pre
         %code.bash
           hapiger
+      %p 
+        %i PostgreSQL and RethinkDB are also offered as event stores for persistence and scalability.
       .page-header
       %h4
-        Create some Events
-      %p Person 'p1' 'view's thing 't1'
+        Create Some Events
+      %p 
+        Person
+        %code p1 
+        %code views
+        thing 
+        %code t1
       %pre
         %code.bash
           :preserve
@@ -53,7 +63,18 @@
                 "thing":"t1"
               }'
 
-      %p Person 'p2' 'view's thing 't1' (person 'p1' and 'p2' are a bit similar)
+      %p 
+        Person
+        %code p2
+        also 
+        %code views
+        thing 
+        %code t1 
+        = ". This makes "
+        %code p1
+        and 
+        %code p2
+        similar
       %pre
         %code.bash
           :preserve
@@ -63,7 +84,12 @@
                 "thing":"t1"
               }'
 
-      %p Person 'p2' 'buy's thing 't2'
+      %p 
+        Person
+        %code p2 
+        %code buys
+        thing 
+        %code t1
       %pre
         %code.bash
           :preserve
@@ -75,6 +101,10 @@
       .page-header
       %h4
         Give Action Weight
+      %p
+        This will make people that
+        %code view
+        the same things similar to each other.
       %pre
         %code.bash
           :preserve
@@ -85,7 +115,25 @@
       .page-header
       %h4
         Get Recommendations
-      %p What would person 'p1' like to 'buy'?
+      %p 
+        What would person 
+        %code p1
+        like to 
+        %code buy
+        ?
+        Because 
+        %code p1
+        and 
+        %code p2
+        are similar, and 
+        %code p2
+        has bought
+        %code t2
+        , HapiGER will recommend 
+        %code p1
+        to 
+        %code buy
+        %code p1
       %pre
         %code.bash
           :preserve
@@ -109,4 +157,3 @@
                 "p2":1
               }
             }
-      %p 'p1' would probably like to 'buy' thing 't2'
