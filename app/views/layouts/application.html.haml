@@ -7,16 +7,22 @@
   = csrf_meta_tags
 
 %body
-  %nav.navbar.navbar-inverse{:role => "navigation", style: 'margin-bottom:0px;'}
+  %nav.navbar.navbar-default.navbar-inverse{:role => "navigation", style: 'margin-bottom:0px;'}
     .container-fluid
       .navbar-header
         %a.navbar-brand{:href => "/"} HapiGER
-      .collapse.navbar-collapse
+        %button.navbar-toggle.collapsed{"data-target" => "#nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #nav-collapse.collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right
           %li.active
             %a{:href => "/"}
               %i.fa.fa-home.icon
               Home
+          
   = yield
 
 
