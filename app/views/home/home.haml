@@ -1,0 +1,112 @@
+.jumbotron.centered
+  .container
+    .row
+      .col-md-1
+      .col-md-3
+        %img.logo{:src => "https://github.com/grahamjenson/hapiger/raw/master/assets/hapiger300x200.png"}/
+      .col-md-6
+        .pull-left
+          %h1
+            HapiGER
+          %p Scalable, Easy Recommendations
+
+.container
+  .row.tagline
+    .col-md-8
+      %h2.subheader
+        Increase your user engagement and sales with
+        %strong good
+        recommendations
+        %strong easily!
+    #call_to_action.col-md-4
+      %a#download_btn.btn.btn-lg.btn-block.btn-primary{:href => "https://github.com/grahamjenson/hapiger"}
+        %i.fa.fa-github.icon
+        Get the Source
+      %a.btn.btn-lg.btn-block{:href => "https://github.com/grahamjenson/hapiger"}
+        %i.fa.fa-book.icon
+        Documentation
+  .row
+    %section#install.col-md-8
+      .page-header
+        %h4 Install It
+      %p Global install with npm
+      %pre
+        %code.bash
+          npm install -g hapiger 
+      .page-header
+      %h4
+        Start HapiGER
+      %p Start with Memory Event Store (events are not persisted)
+      %pre
+        %code.bash
+          hapiger
+      .page-header
+      %h4
+        Create some Events
+      %p Person 'p1' 'view's thing 't1'
+      %pre
+        %code.bash
+          :preserve
+            curl -X POST 'http://localhost:3456/default/events' -d '{
+                "person":"p1", 
+                "action": "view", 
+                "thing":"t1"
+              }'
+
+      %p Person 'p2' 'view's thing 't1' (person 'p1' and 'p2' are a bit similar)
+      %pre
+        %code.bash
+          :preserve
+            curl -X POST 'http://localhost:3456/default/events' -d '{
+                "person":"p2", 
+                "action": "view", 
+                "thing":"t1"
+              }'
+
+      %p Person 'p2' 'buy's thing 't2'
+      %pre
+        %code.bash
+          :preserve
+            curl -X POST 'http://localhost:3456/default/events' -d '{
+                "person":"p2", 
+                "action": "buy", 
+                "thing":"t2"
+              }'
+      .page-header
+      %h4
+        Give Action Weight
+      %pre
+        %code.bash
+          :preserve
+            curl -X POST 'http://localhost:3456/default/actions' -d'{
+                "name": "view", 
+                "weight": 1
+              }'
+      .page-header
+      %h4
+        Get Recommendations
+      %p What would person 'p1' like to 'buy'?
+      %pre
+        %code.bash
+          :preserve
+            curl -X GET 'http://localhost:3456/default/recommendations?person=p1&action=buy'
+      %pre
+        %code.json
+          :preserve
+            {
+              "recommendations":[
+                {
+                  "thing":"t2",
+                  "weight":0.22119921692859512,
+                  "people":[
+                    "p2"
+                  ],
+                  "last_actioned_at":"2015-02-05T05:56:42.862Z"
+                }
+              ],
+              "confidence":0.00019020140391302825,
+              "similar_people":{
+                "p2":1
+              }
+            }
+      %p 'p1' would probably like to 'buy' thing 't2'

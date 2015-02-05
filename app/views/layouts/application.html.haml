@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+  %title HapiGER
+  = stylesheet_link_tag    'application', media: 'all'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
+
+%body
+  %nav.navbar.navbar-inverse{:role => "navigation", style: 'margin-bottom:0px;'}
+    .container-fluid
+      .navbar-header
+        %a.navbar-brand{:href => "/"} HapiGER
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li.active
+            %a{:href => "/"}
+              %i.fa.fa-home.icon
+              Home
+  = yield
+
+  :javascript
+    hljs.initHighlightingOnLoad();
+
+  %br
+  %nav.navbar.navbar-default
+    .container-fluid
+      %ul.nav.pager
+        %li
+          %a{:href => "http://www.maori.geek.nz/post/how_ger_generates_recommendations_the_anatomy_of_a_recommendations_engine"} More About GER
+        %li
+          %a{:href => "http://www.twitter.com/grahamjenson"}
+            %i.fa.fa-twitter.twitter.icon
+            Twitter
+        %li
+          %a{:href => "http://github.com/grahamjenson/hapiger"}
+            %i.fa.fa-github.github.icon
+            Source
+
+  %br
+  %br
