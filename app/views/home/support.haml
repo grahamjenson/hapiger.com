@@ -1,0 +1,113 @@
+.container
+  .row.tagline
+    .col-md-8
+      %h2.subheader
+        Support directly from a 
+        %strong 
+          %i Recommendations Expert
+      %br
+  .row.price-boxes
+    .col-sm-12.col-md-4
+      .panel.panel-danger
+        .panel-heading
+          %h3.text-center Github Issues
+        .panel-body.text-center
+          %p.lead Questions, Bug Reports and Requests for Features
+        %ul.list-group.list-group-flush
+          %li.list-group-item
+            %i.fa.fa-dollar.text-danger.icon
+            FREE
+          %li.list-group-item
+            %i.fa.fa-clock-o.text-danger.icon
+            ASAP prioritisation and response
+          %li.list-group-item
+            %i.fa.fa-group.text-danger.icon
+            Public Access and Contribution
+          %li.list-group-item
+            %i.fa.fa-exclamation-circle.text-danger.icon
+            %a{:href => "https://github.com/grahamjenson/hapiger/issues", :target => "_blank"} Available Here
+    .col-sm-12.col-md-4
+      .panel.panel-info
+        .panel-heading
+          %h3.text-center Tuneup
+        .panel-body.text-center
+          %p.lead Tune HapiGER for Better Recommendations
+        %ul.list-group.list-group-flush
+          %li.list-group-item
+            I review your events dataset to better tune the settings on HapiGER to generate better recommendations.
+            I also offer advice on how to best use, scale and optimize HapiGER and send you a report.
+          %li.list-group-item
+            %i.fa.fa-question.text-info.icon
+            More questions? See
+            %a{:href => "#faqs"} FAQ
+            below.
+          %li.list-group-item
+            %i.fa.fa-dollar.text-info.icon
+            Pricing based on number of events to be analyzed, starting at
+            %strong $750
+          %li.list-group-item
+            %i.fa.fa-envelope.text-info.icon
+            %a{:href => "mailto:grahamjenson@maori.geek.nz?subject=Tuneup"} Email to arrange your tuneup
+    .col-sm-12.col-md-4
+      .panel.panel-success
+        .panel-heading
+          %h3.text-center Custom Work or Support
+        .panel-body.text-center
+          %p.lead Tweak HapiGER or GER to meet your requirements.
+        %ul.list-group.list-group-flush
+          %li.list-group-item
+            I will go over with you for your requirements, and come up with a plan to adapt or wrap HapiGER or GER that we can agree on. Then provide an estimate for the amount of work involved and proceed from there. 
+          %li.list-group-item
+            %i.fa.fa-dollar.text-success.icon
+            %strong 1500/day
+          %li.list-group-item
+            %i.fa.fa-envelope.text-success.icon
+            %a{:href => "mailto:grahamjenson@maori.geek.nz?subject=Custom"} Email to discuss.
+
+
+  .row.faqs
+    .col-xs-12
+      .panel.panel-default
+        .panel-heading
+          %h4#faqs FAQ
+        .panel-body
+          .media
+            .media-body
+              %h4.media-heading How can I use Github Issues?
+              %p
+                Github Issues is currently the best way to ask questions, request features to be added, or file bug reports when using HapiGER.
+              %p
+                I encourage posting as much information as you can about your issues, and I will respond as soon as possible to help out.
+          .media
+            .media-body
+              %h4.media-heading What's Tuneup?
+              %p
+                Properly integrating and optimizing HapiGER for your particular application can be difficult.
+                Every application has different users, products, usage patterns and requirements that result in a unique environment for recommendations.
+              %p
+                Essentially, we will discuss your requirements and what you want out of HapiGER. You can send me a sample of the events you are sending or (planning to send) to HapiGER so that I can inspect and analyze possible strategies for improvement.
+              %p
+                Pricing is based on the number of events; $750 for applications with under 10k events, increasing up to $1500 for 100k events. If the dataset is particularly complex or has difficult requirements these prices may increase to as much as double. I will be happy to also Tuneup events sets larger than 100k, though this work will be priced on a case-by-case basis.
+              %p
+                Note: I consider all data reviewed to be under NDA.  I would never share data or use it in any way without explicit permission. Once you approve of the report and acknowledge receipt of the invoice I delete all copies of your data.
+          .media
+            .media-body
+              %h4.media-heading How does Custom Support work?
+              %p
+                Email me with a summary of your needs; I'll help you if I can. I might:
+              %ul
+                %li Give you an estimate of time and price if the work is straightforward
+                %li Suggest alternatives if HapiGER is not the right solution
+                %li Decline the work due to timing or relevancy
+              %p
+              %p
+                Note that work must be HapiGER or GER related.  I am currently not accepting general development
+                work.  My contracting price is
+                %strong $250/hour
+                or
+                %strong $1500/day
+          .media
+            .media-body
+              %h4.media-heading Who are you?
+              %p
+                I'm Dr. Graham Jenson,  I've been a developer for 6 years and I'm the author of HapiGER and GER. I hope to grow HapiGER into a project used by many applications to provide good recommendations. 

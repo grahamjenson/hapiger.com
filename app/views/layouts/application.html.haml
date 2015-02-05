@@ -2,6 +2,13 @@
 %html
   %head
   %title HapiGER
+  %meta{:content => "HapiGER a Scalable Simple Recommendations Engine", :name => "description"}
+  %meta{:content => "HapiGER", :property => "og:site_name"}
+  %meta{:content => "company", :property => "og:type"}
+  %meta{:content => "HapiGER a Scalable Simple Recommendations Engine", :property => "og:title"}
+  %meta{:content => "http://www.hapiger.com", :property => "og:url"}
+  %meta{:content => "https://github.com/grahamjenson/hapiger/raw/master/assets/hapiger300x200.png", :property => "og:image"}
+  %meta{:content => "HapiGER a Scalable Simple Recommendations Engine", :property => "og:description"}
   = stylesheet_link_tag    'application', media: 'all'
   = javascript_include_tag 'application'
   = csrf_meta_tags
@@ -18,11 +25,26 @@
           %span.icon-bar
       #nav-collapse.collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right
-          %li.active
+          %li
             %a{:href => "/"}
               %i.fa.fa-home.icon
               Home
-          
+          %li
+            %a{:href => "/support"}
+              %i.fa.fa-support.icon
+              Support
+
+  .jumbotron.centered
+    .container
+      .row
+        .col-md-1
+        .col-md-3
+          %img.logo{:src => "https://github.com/grahamjenson/hapiger/raw/master/assets/hapiger300x200.png"}/
+        .col-md-6
+          .pull-left
+            %h1
+              HapiGER
+            %p Scalable, Easy Recommendations
   = yield
 
 
