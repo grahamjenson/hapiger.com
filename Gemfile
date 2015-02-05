@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem "thin"
+gem "rails_12factor"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
