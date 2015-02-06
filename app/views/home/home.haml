@@ -16,15 +16,6 @@
       %a.btn.btn-lg.btn-block{:href => "https://github.com/grahamjenson/hapiger"}
         %i.fa.fa-book.icon
         Documentation
-      .page-header
-      .centering{style: 'text-align: center;'}
-        %h4 Keep Up
-        %h5 Enter your email to be the first to know about all things HapiGER
-      = form_tag("/subscribe", method: "post", :name => 'eaddress', :class => 'validate') do
-        .input-group
-          %input.email.form-control{:name => "EMAIL", :placeholder => "E-mail address", :type => "email", :value => ""}
-          %span.input-group-btn
-            %input.button.btn.btn-default{:name => "subscribe", :type => "submit", :value => "Subscribe"}
   .row
     %section#install.col-md-8
       .page-header
@@ -161,3 +152,15 @@
         %li 
           Node.js 
           %a{href: 'https://www.npmjs.com/package/ger-client'} ger-client
+    
+    .col-md-4
+      %br
+      .email-form.pull-left
+        .centering{style: 'text-align: center;'}
+          %h4 Keep Up
+          %h5 Enter your email to be the first to know about all things HapiGER
+        = form_tag("/subscribe", method: "post", :name => 'eaddress', :class => 'validate') do
+          .input-group
+            %input.email.form-control{:name => "EMAIL", :placeholder => "E-mail address", :type => "email", :value => ""}
+            %span.input-group-btn
+              %input.button.btn.btn-default{:name => "subscribe", :type => "submit", :value => "Subscribe"}
