@@ -45,6 +45,17 @@
             %h1
               HapiGER
             %p Scalable, Easy Recommendations
+            
+  - if flash[:notice].present? || flash[:error].present?
+    .container
+      .row
+        .col-md-1
+        .col-md-10
+          - if flash[:notice].present?
+            .alert.alert-success(role="alert")= flash[:notice]
+          - if flash[:error].present?
+            .alert.alert-danger(role="alert")= flash[:error]
+
   = yield
 
 

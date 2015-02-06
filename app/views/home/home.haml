@@ -16,6 +16,12 @@
       %a.btn.btn-lg.btn-block{:href => "https://github.com/grahamjenson/hapiger"}
         %i.fa.fa-book.icon
         Documentation
+      .page-header
+      = form_tag("/subscribe", method: "post", :name => 'eaddress', :class => 'validate') do
+        .input-group
+          %input.email.form-control{:name => "EMAIL", :placeholder => "E-mail address", :type => "email", :value => ""}
+          %span.input-group-btn
+            %input.button.btn.btn-default{:name => "subscribe", :type => "submit", :value => "Subscribe"}
   .row
     %section#install.col-md-8
       .page-header

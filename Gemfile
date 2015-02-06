@@ -31,7 +31,7 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem "thin"
 gem "rails_12factor"
-
+gem "mailchimp-api", require: 'mailchimp'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
