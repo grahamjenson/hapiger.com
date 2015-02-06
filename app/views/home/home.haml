@@ -17,6 +17,9 @@
         %i.fa.fa-book.icon
         Documentation
       .page-header
+      .centering{style: 'text-align: center;'}
+        %h4 Keep Up
+        %h5 Enter your email to be the first to know about all things HapiGER
       = form_tag("/subscribe", method: "post", :name => 'eaddress', :class => 'validate') do
         .input-group
           %input.email.form-control{:name => "EMAIL", :placeholder => "E-mail address", :type => "email", :value => ""}
