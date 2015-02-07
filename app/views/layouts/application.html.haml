@@ -17,7 +17,10 @@
   %nav.navbar.navbar-default.navbar-inverse{:role => "navigation", style: 'margin-bottom:0px;'}
     .container-fluid
       .navbar-header
-        %a.navbar-brand{:href => "/"} HapiGER
+        %a.navbar-brand{:href => "/"} 
+          HapiGER
+          %sub
+            &#x3b2;eta
         %button.navbar-toggle.collapsed{"data-target" => "#nav-collapse", "data-toggle" => "collapse", :type => "button"}
           %span.sr-only Toggle navigation
           %span.icon-bar
@@ -44,6 +47,8 @@
           .pull-left
             %h1
               HapiGER
+              %sub
+                &#x3b2;eta
             %p Scalable, Easy Recommendations
             
   - if flash[:notice].present? || flash[:error].present?

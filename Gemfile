@@ -32,6 +32,7 @@ gem "font-awesome-rails"
 gem "thin"
 gem "rails_12factor"
 gem "mailchimp-api", require: 'mailchimp'
+gem 'github-markdown'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -45,6 +45,7 @@ GEM
     execjs (2.3.0)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
+    github-markdown (0.6.8)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -140,6 +141,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   font-awesome-rails
+  github-markdown
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
